@@ -54,9 +54,8 @@ trends under different time-series conditions. The workflow combines:
 │   ├── 2_create-simulation.R      # Simulate population time series
 │   ├── 3_model-simulation.R       # Fit models to simulated time series
 │   ├── 4_analysis-ms.R            # Calculate reliability metrics and figures
-│   └── make_spatial_map.R         # Generate the interactive spatial map
 ├── docs/
-│   └── spatial_map.html           # Generated interactive map (after running script)
+│   └── Fig_S3.png           # Generated map 
 ├── LICENSE
 ├── README.Rmd                  # Editable documentation source
 └── README.md                   # GitHub-rendered output
@@ -283,7 +282,7 @@ Raw BioTIME data
     v
 0_biotime_clean_data.R
     |-- data_filtered.csv
-    `-- conversor.csv --> make_spatial_map.R --> docs/spatial_map.html
+    `-- conversor.csv
     |
     v
 1_analyse_biotime.R
@@ -339,8 +338,8 @@ standard deviation** `sigma`, use `sqrt(exp(sigma^2) - 1)`.
 R (original documentation: version 4.0 or later). To render this R
 Markdown document, install `rmarkdown` and `knitr`. Main analysis
 packages include `glmmTMB`, `MASS`, `dplyr`, `data.table`, `tidyr`,
-`ggplot2`, `terra`, `cowplot`, `patchwork`, `scales`, `corrplot`,
-`leaflet`, and `htmlwidgets`.
+`ggplot2`, `terra`, `cowplot`, `patchwork`, `scales`, `corrplot` and
+`leaflet`.
 
 ## Running the analysis
 
@@ -407,8 +406,6 @@ database of biodiversity time series. *Global Ecology and Biogeography*,
 Edit `README.Rmd` and render it from the repository root:
 
 The generated `README.md` is the version displayed by GitHub. The
-interactive Leaflet map is a separate HTML document; its link becomes
-functional after the map has been generated and published. The metadata
-tables above are based on the column names and examples supplied for the
-three datasets, not on an automated inspection of the complete CSV
-files.
+metadata tables above are based on the column names and examples
+supplied for the three datasets, not on an automated inspection of the
+complete CSV files.
